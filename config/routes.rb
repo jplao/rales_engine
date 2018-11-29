@@ -6,11 +6,17 @@ Rails.application.routes.draw do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
         get '/random.json', to: 'search#show'
+        get '/:id/revenue', to: 'revenue#show'
       end
 
       resources :merchants, only: [:index, :show]
 
-      resources :items, only: [:index]
+      namespace :items do
+        get '/find', to: 'search#show'
+        get '/find_all', to: 'search#index'
+        get '/random.json', to: 'search#show'
+      end
+      resources :items, only: [:index, :show]
     end
   end
 end
