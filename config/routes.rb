@@ -8,7 +8,7 @@ Rails.application.routes.draw do
         get '/random.json', to: 'search#show'
         get '/most_revenue', to: 'revenue#index'
         get '/:id/revenue', to: 'revenue#show'
-
+        get '/most_items', to: 'item#index'
       end
       resources :merchants, only: [:index, :show]
 

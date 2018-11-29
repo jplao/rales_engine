@@ -247,6 +247,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         1,
         null,
@@ -361,6 +363,23 @@
         1,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
         null,
         1,
         null,
@@ -911,7 +930,7 @@
         null,
         1,
         null,
-        0,
+        1,
         0,
         0,
         null,
@@ -1342,15 +1361,12 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants/revenue_controller.rb": [
         1,
         1,
+        0,
+        null,
+        null,
+        1,
         1,
         null,
-        null
-      ],
-      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/serializers/merchant_serializer.rb": [
-        1,
-        1,
-        1,
-        1,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants_controller.rb": [
@@ -1362,6 +1378,13 @@
         1,
         1,
         null,
+        null
+      ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/serializers/merchant_serializer.rb": [
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants/search_controller.rb": [
@@ -1426,6 +1449,6 @@
         null
       ]
     },
-    "timestamp": 1543506798
+    "timestamp": 1543511608
   }
 }
