@@ -22,86 +22,86 @@ describe 'Item API' do
   end
 
   it 'finds a single item by id' do
-    merch_1 = create(:item).id
-    merch_2 = create(:item)
+    item_1 = create(:item).id
+    item_2 = create(:item)
 
-    get "/api/v1/items/find?id=#{merch_1}"
+    get "/api/v1/items/find?id=#{item_1}"
 
     item = JSON.parse(response.body)['data']['attributes']
     expect(response).to be_successful
-    expect(item["id"]).to eq(merch_1)
-    expect(item["id"]).to_not eq(merch_2.id)
+    expect(item["id"]).to eq(item_1)
+    expect(item["id"]).to_not eq(item_2.id)
   end
 
   it 'finds a single item by name' do
     name = create(:item).name
-    merch_2 = create(:item)
+    item_2 = create(:item)
 
     get "/api/v1/items/find?name=#{name}"
 
     item = JSON.parse(response.body)['data']['attributes']
     expect(response).to be_successful
     expect(item["name"]).to eq(name)
-    expect(item["name"]).to_not eq(merch_2.name)
+    expect(item["name"]).to_not eq(item_2.name)
   end
 
   it 'finds a single item by created_at' do
-    merch_1 = create(:item, created_at: "2012-03-27T14:53:58.000Z")
-    merch_2 = create(:item)
+    item_1 = create(:item, created_at: "2012-03-27T14:53:58.000Z")
+    item_2 = create(:item)
 
-    get "/api/v1/items/find?created_at=#{merch_1.created_at}"
+    get "/api/v1/items/find?created_at=#{item_1.created_at}"
 
     item = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
     expect(item["created_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(item["created_at"]).to_not eq(merch_2.created_at)
+    expect(item["created_at"]).to_not eq(item_2.created_at)
   end
 
   it 'finds a single item by updated_at' do
-    merch_1 = create(:item, updated_at: "2012-03-27T14:53:58.000Z")
-    merch_2 = create(:item)
+    item_1 = create(:item, updated_at: "2012-03-27T14:53:58.000Z")
+    item_2 = create(:item)
 
-    get "/api/v1/items/find?updated_at=#{merch_1.updated_at}"
+    get "/api/v1/items/find?updated_at=#{item_1.updated_at}"
 
     item = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
     expect(item["updated_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(item["updated_at"]).to_not eq(merch_2.updated_at)
+    expect(item["updated_at"]).to_not eq(item_2.updated_at)
   end
 
   it 'finds all items by id' do
-    merch_1 = create(:item).id
-    merch_2 = create(:item)
+    item_1 = create(:item).id
+    item_2 = create(:item)
 
-    get "/api/v1/items/find?id=#{merch_1}"
+    get "/api/v1/items/find?id=#{item_1}"
 
     item = JSON.parse(response.body)['data']['attributes']
     expect(response).to be_successful
-    expect(item["id"]).to eq(merch_1)
-    expect(item["id"]).to_not eq(merch_2.id)
+    expect(item["id"]).to eq(item_1)
+    expect(item["id"]).to_not eq(item_2.id)
   end
 
   it 'finds all items by name' do
-    merch_name = 'A Item'
-    merch_1, merch_2 = create_list(:item, 2, name: merch_name)
-    merch_3 = create(:item)
+    item_name = 'A Item'
+    item_1, item_2 = create_list(:item, 2, name: item_name)
+    item_3 = create(:item)
 
-    get "/api/v1/items/find_all?name=#{merch_1.name}"
+    get "/api/v1/items/find_all?name=#{item_1.name}"
 
     items = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(items[0]['attributes']["name"]).to eq(merch_name)
-    expect(items[1]['attributes']["name"]).to eq(merch_name)
-    expect(items[0]['attributes']["name"]).to_not eq(merch_3.name)
+    expect(items[0]['attributes']["name"]).to eq(item_name)
+    expect(items[1]['attributes']["name"]).to eq(item_name)
+    expect(items[0]['attributes']["name"]).to_not eq(item_3.name)
   end
 
   it 'finds all items by created_at' do
     created = "2012-03-27T14:53:58.000Z"
-    merch_1, merch_2 = create_list(:item, 2, created_at: "2012-03-27T14:53:58.000Z")
-    merch_3 = create(:item)
+    item_1, item_2 = create_list(:item, 2, created_at: "2012-03-27T14:53:58.000Z")
+    item_3 = create(:item)
 
     get "/api/v1/items/find_all?created_at=#{created}"
 
@@ -110,13 +110,13 @@ describe 'Item API' do
     expect(response).to be_successful
     expect(items[0]['attributes']["created_at"]).to eq(created)
     expect(items[1]['attributes']["created_at"]).to eq(created)
-    expect(items[0]['attributes']["created_at"]).to_not eq(merch_3.created_at)
+    expect(items[0]['attributes']["created_at"]).to_not eq(item_3.created_at)
   end
 
   it 'finds all items by updated_at' do
     updated = "2012-03-27T14:53:58.000Z"
-    merch_1, merch_2 = create_list(:item, 2, updated_at: "2012-03-27T14:53:58.000Z")
-    merch_3 = create(:item)
+    item_1, item_2 = create_list(:item, 2, updated_at: "2012-03-27T14:53:58.000Z")
+    item_3 = create(:item)
 
     get "/api/v1/items/find_all?updated_at=#{updated}"
 
@@ -125,12 +125,12 @@ describe 'Item API' do
     expect(response).to be_successful
     expect(items[0]['attributes']["updated_at"]).to eq(updated)
     expect(items[1]['attributes']["updated_at"]).to eq(updated)
-    expect(items[0]['attributes']["updated_at"]).to_not eq(merch_3.updated_at)
+    expect(items[0]['attributes']["updated_at"]).to_not eq(item_3.updated_at)
   end
 
   it 'finds a random item' do
-    merch_1, merch_2, merch_3 = create_list(:item, 3)
-    array_of_items_ids = [merch_1.id, merch_2.id, merch_3.id]
+    item_1, item_2, item_3 = create_list(:item, 3)
+    array_of_items_ids = [item_1.id, item_2.id, item_3.id]
 
     get '/api/v1/items/random.json'
 
