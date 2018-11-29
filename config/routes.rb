@@ -6,7 +6,9 @@ Rails.application.routes.draw do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
         get '/random.json', to: 'search#show'
+        get '/most_revenue', to: 'revenue#index'
         get '/:id/revenue', to: 'revenue#show'
+
       end
       resources :merchants, only: [:index, :show]
 
