@@ -8,7 +8,6 @@ Rails.application.routes.draw do
         get '/random.json', to: 'search#show'
         get '/:id/revenue', to: 'revenue#show'
       end
-
       resources :merchants, only: [:index, :show]
 
       namespace :items do
@@ -17,6 +16,13 @@ Rails.application.routes.draw do
         get '/random.json', to: 'search#show'
       end
       resources :items, only: [:index, :show]
+
+      namespace :customers do
+        get '/find', to: 'search#show'
+        get '/find_all', to: 'search#index'
+        get '/random.json', to: 'search#show'
+      end
+      resources :customers, only: [:index, :show]
     end
   end
 end
