@@ -15,5 +15,5 @@ end
 
 private
 def search_params
-  params.permit(:id, :created_at, :updated_at)
+  params.permit(:id, :created_at, :updated_at, :customer_id, :merchant_id, :status)
 end
