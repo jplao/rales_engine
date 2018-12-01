@@ -1,7 +1,11 @@
 class Api::V1::TransactionsController < ApplicationController
 
   def index
-    render json: TransactionSerializer.new(Transaction.all)
+    if params[:invoice_id]
+      render json: TransactionSerializer.new(Transaction.where(invoice_id: params[:invoice_id]))
+    else
+      render json: TransactionSerializer.new(Transaction.all)
+    end
   end
 
   def show

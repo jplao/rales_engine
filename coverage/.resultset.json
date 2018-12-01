@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        92,
-        94,
+        93,
+        95,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        68,
+        69,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        51,
-        53,
-        53,
+        52,
+        54,
+        54,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        140,
+        141,
         null,
         null
       ],
@@ -231,9 +231,9 @@
         1,
         1,
         1,
-        23,
-        23,
-        23,
+        25,
+        25,
+        25,
         null,
         null
       ],
@@ -278,6 +278,12 @@
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -1130,6 +1136,27 @@
         null,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/invoice_relationships_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/merchant_relationships_spec.rb": [
         1,
         null,
@@ -1498,7 +1525,11 @@
         1,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null,
         1,
@@ -1534,6 +1565,6 @@
         null
       ]
     },
-    "timestamp": 1543635654
+    "timestamp": 1543636705
   }
 }
