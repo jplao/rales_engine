@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        97,
-        99,
+        98,
+        100,
         null,
         null
       ],
@@ -196,8 +196,8 @@
         1,
         1,
         1,
-        26,
         27,
+        28,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        73,
+        74,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        55,
-        57,
-        57,
+        56,
+        58,
+        58,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        149,
+        151,
         null,
         null
       ],
@@ -291,6 +291,8 @@
         1,
         null,
         1,
+        1,
+        null,
         null,
         1,
         1,
@@ -1151,6 +1153,23 @@
         null,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/invoice_items_relationships_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/invoice_relationships_spec.rb": [
         1,
         null,
@@ -1597,6 +1616,13 @@
         14,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/invoice_items/invoices_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/transactions_controller.rb": [
         1,
         null,
@@ -1641,6 +1667,6 @@
         null
       ]
     },
-    "timestamp": 1543639499
+    "timestamp": 1543685053
   }
 }
