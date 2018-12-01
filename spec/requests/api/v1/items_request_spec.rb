@@ -53,8 +53,8 @@ describe 'Item API' do
     item = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(item["created_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(item["created_at"]).to_not eq(item_2.created_at)
+    expect(item['id']).to eq(item_1.id)
+    expect(item['id']).to_not eq(item_2.id)
   end
 
   it 'finds a single item by updated_at' do
@@ -66,8 +66,8 @@ describe 'Item API' do
     item = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(item["updated_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(item["updated_at"]).to_not eq(item_2.updated_at)
+    expect(item['id']).to eq(item_1.id)
+    expect(item['id']).to_not eq(item_2.id)
   end
 
   it 'finds all items by id' do
@@ -107,9 +107,9 @@ describe 'Item API' do
     items = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(items[0]['attributes']["created_at"]).to eq(created)
-    expect(items[1]['attributes']["created_at"]).to eq(created)
-    expect(items[0]['attributes']["created_at"]).to_not eq(item_3.created_at)
+    expect(items[0]['attributes']['id']).to eq(item_1.id)
+    expect(items[1]['attributes']['id']).to eq(item_2.id)
+    expect(items).to_not include(item_3.id)
   end
 
   it 'finds all items by updated_at' do
@@ -122,9 +122,9 @@ describe 'Item API' do
     items = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(items[0]['attributes']["updated_at"]).to eq(updated)
-    expect(items[1]['attributes']["updated_at"]).to eq(updated)
-    expect(items[0]['attributes']["updated_at"]).to_not eq(item_3.updated_at)
+    expect(items[0]['attributes']['id']).to eq(item_1.id)
+    expect(items[1]['attributes']['id']).to eq(item_2.id)
+    expect(items).to_not include(item_3.id)
   end
 
   it 'finds a random item' do

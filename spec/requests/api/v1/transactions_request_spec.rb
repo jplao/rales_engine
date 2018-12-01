@@ -41,8 +41,8 @@ describe 'Transaction API' do
     transaction = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(transaction["created_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(transaction["created_at"]).to_not eq(transaction_2.created_at)
+    expect(transaction['id']).to eq(transaction_1.id)
+    expect(transaction['id']).to_not eq(transaction_2.id)
   end
 
   it 'finds a single transaction by updated_at' do
@@ -54,8 +54,8 @@ describe 'Transaction API' do
     transaction = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(transaction["updated_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(transaction["updated_at"]).to_not eq(transaction_2.updated_at)
+    expect(transaction['id']).to eq(transaction_1.id)
+    expect(transaction['id']).to_not eq(transaction_2.id)
   end
 
   it 'finds all transactions by id' do
@@ -80,9 +80,9 @@ describe 'Transaction API' do
     transactions = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(transactions[0]['attributes']["created_at"]).to eq(created)
-    expect(transactions[1]['attributes']["created_at"]).to eq(created)
-    expect(transactions[0]['attributes']["created_at"]).to_not eq(transaction_3.created_at)
+    expect(transactions[0]['attributes']['id']).to eq(transaction_1.id)
+    expect(transactions[1]['attributes']['id']).to eq(transaction_2.id)
+    expect(transactions).to_not include(transaction_3.id)
   end
 
   it 'finds all transactions by updated_at' do
@@ -95,9 +95,9 @@ describe 'Transaction API' do
     transactions = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(transactions[0]['attributes']["updated_at"]).to eq(updated)
-    expect(transactions[1]['attributes']["updated_at"]).to eq(updated)
-    expect(transactions[0]['attributes']["updated_at"]).to_not eq(transaction_3.updated_at)
+    expect(transactions[0]['attributes']['id']).to eq(transaction_1.id)
+    expect(transactions[1]['attributes']['id']).to eq(transaction_2.id)
+    expect(transactions).to_not include(transaction_3.id)
   end
 
   it 'finds a random transaction' do
