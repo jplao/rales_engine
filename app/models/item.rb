@@ -17,4 +17,9 @@ class Item < ApplicationRecord
     .order('total_sold desc')
     .limit(quantity)
   end
+
+  def self.by_invoice(invoice_id)
+    joins(:invoice_items)
+    .where(invoice_items: {invoice_id: invoice_id})
+  end
 end
