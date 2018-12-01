@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       end
       resources :customers, only: [:index, :show] do
         get '/invoices', to: 'invoices#index'
+        get '/transactions', to: 'transactions#index'
       end
 
       namespace :invoices do
