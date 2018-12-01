@@ -23,7 +23,9 @@ Rails.application.routes.draw do
         get '/most_revenue', to: 'revenue#index'
         get '/most_items', to: 'total#index'
       end
-      resources :items, only: [:index, :show]
+      resources :items, only: [:index, :show] do
+        get 'invoice_items', to: 'invoice_items#index'
+      end
 
       namespace :customers do
         get '/find', to: 'search#show'
