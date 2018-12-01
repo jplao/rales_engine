@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        95,
-        97,
+        96,
+        98,
         null,
         null
       ],
@@ -206,7 +206,7 @@
         1,
         1,
         1,
-        71,
+        72,
         null,
         null
       ],
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        147,
+        148,
         null,
         null
       ],
@@ -282,7 +282,6 @@
         1,
         1,
         1,
-        1,
         null,
         null,
         1,
@@ -314,6 +313,11 @@
         null,
         null,
         0,
+        null,
+        null,
+        1,
+        null,
+        1,
         null,
         null
       ],
@@ -1182,6 +1186,17 @@
         null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
         1,
         null,
         null
@@ -1362,7 +1377,11 @@
         null,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -1600,6 +1619,6 @@
         null
       ]
     },
-    "timestamp": 1543638060
+    "timestamp": 1543639223
   }
 }
