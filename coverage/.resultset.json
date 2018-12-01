@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        97,
         99,
+        101,
         null,
         null
       ],
@@ -196,8 +196,8 @@
         1,
         1,
         1,
-        26,
-        27,
+        28,
+        29,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        73,
+        75,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        55,
         57,
-        57,
+        59,
+        59,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        149,
+        153,
         null,
         null
       ],
@@ -291,6 +291,9 @@
         1,
         null,
         1,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -315,10 +318,6 @@
         null,
         0,
         null,
-        null,
-        1,
-        null,
-        1,
         null,
         null
       ],
@@ -357,6 +356,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         null,
@@ -383,6 +383,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         null,
@@ -399,10 +400,6 @@
         null,
         0,
         null,
-        null,
-        1,
-        null,
-        1,
         null,
         null
       ],
@@ -456,10 +453,6 @@
         null,
         0,
         null,
-        null,
-        1,
-        null,
-        1,
         null,
         null
       ],
@@ -1151,6 +1144,35 @@
         null,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/invoice_items_relationships_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/invoice_relationships_spec.rb": [
         1,
         null,
@@ -1485,7 +1507,11 @@
         null,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -1530,7 +1556,11 @@
         null,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -1641,6 +1671,6 @@
         null
       ]
     },
-    "timestamp": 1543639499
+    "timestamp": 1543686166
   }
 }
