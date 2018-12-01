@@ -318,10 +318,6 @@
         0,
         null,
         null,
-        1,
-        null,
-        1,
-        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/models/application_record.rb": [
@@ -359,6 +355,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         null,
@@ -385,6 +382,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         null,
@@ -401,10 +399,6 @@
         null,
         0,
         null,
-        null,
-        1,
-        null,
-        1,
         null,
         null
       ],
@@ -458,10 +452,6 @@
         null,
         0,
         null,
-        null,
-        1,
-        null,
-        1,
         null,
         null
       ],
@@ -1504,7 +1494,11 @@
         null,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -1616,13 +1610,6 @@
         14,
         null
       ],
-      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/invoice_items/invoices_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/transactions_controller.rb": [
         1,
         null,
@@ -1667,6 +1654,6 @@
         null
       ]
     },
-    "timestamp": 1543685053
+    "timestamp": 1543685832
   }
 }

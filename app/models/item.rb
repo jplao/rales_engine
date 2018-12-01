@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :merchant
   has_many :invoice_items
+  has_many :invoices, through: :invoice_items
 
   def self.most_revenue(quantity)
     select('items.*, sum(invoice_items.quantity * invoice_items.unit_price) as revenue')
@@ -18,8 +19,4 @@ class Item < ApplicationRecord
     .limit(quantity)
   end
 
-  def self.by_invoice(invoice_id)
-    joins(:invoice_items)
-    .where(invoice_items: {invoice_id: invoice_id})
-  end
 end

@@ -49,7 +49,7 @@ describe 'nested invoice resources API' do
     expect(response).to be_successful
 
     customer = JSON.parse(response.body)
-    expect(customer["data"][0]['id']).to eq(customer_1.id.to_s)
+    expect(customer["data"]["attributes"]['id']).to eq(customer_1.id)
   end
 
   it 'sends the merchant specific to an invoice' do
@@ -61,6 +61,6 @@ describe 'nested invoice resources API' do
     expect(response).to be_successful
 
     merchant = JSON.parse(response.body)
-    expect(merchant["data"][0]['id']).to eq(merchant_1.id.to_s)
+    expect(merchant["data"]['attributes']['id']).to eq(merchant_1.id)
   end
 end

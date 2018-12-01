@@ -38,8 +38,4 @@ class Merchant < ApplicationRecord
     .limit(1)
   end
 
-  def self.by_invoice(invoice_id)
-    joins(:invoices)
-    .where("invoices.id = #{invoice_id}")
-  end
 end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       namespace :merchants do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
-        get '/random.json', to: 'search#show'
+        get '/random', to: 'search#show'
         get '/most_revenue', to: 'revenue#index'
         get '/:id/revenue', to: 'revenue#show'
         get '/most_items', to: 'item#index'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       namespace :items do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
-        get '/random.json', to: 'search#show'
+        get '/random', to: 'search#show'
         get '/most_revenue', to: 'revenue#index'
         get '/most_items', to: 'total#index'
       end
@@ -28,14 +28,14 @@ Rails.application.routes.draw do
       namespace :customers do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
-        get '/random.json', to: 'search#show'
+        get '/random', to: 'search#show'
       end
       resources :customers, only: [:index, :show]
 
       namespace :invoices do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
-        get '/random.json', to: 'search#show'
+        get '/random', to: 'search#show'
       end
       resources :invoices, only: [:index, :show] do
         resources :transactions, only: [:index]
@@ -48,16 +48,16 @@ Rails.application.routes.draw do
       namespace :invoice_items do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
-        get '/random.json', to: 'search#show'
+        get '/random', to: 'search#show'
       end
       resources :invoice_items, only: [:index, :show] do
-        get '/invoice', to: 'invoice_items/invoices#show'
+        get '/invoice', to: 'invoices#show'
       end
 
       namespace :transactions do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
-        get '/random.json', to: 'search#show'
+        get '/random', to: 'search#show'
       end
       resources :transactions, only: [:index, :show]
     end

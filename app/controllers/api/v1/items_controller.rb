@@ -4,7 +4,7 @@ class Api::V1::ItemsController < ApplicationController
     if params[:merchant_id]
       render json: ItemSerializer.new(Item.where(merchant_id: params[:merchant_id]))
     elsif params[:invoice_id]
-      render json: ItemSerializer.new(Item.by_invoice(params[:invoice_id]))
+      render json: ItemSerializer.new(Invoice.find(params[:invoice_id]).items)
     else
       render json: ItemSerializer.new(Item.all)
     end
