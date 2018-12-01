@@ -6,6 +6,7 @@ describe 'Merchant API' do
     item_1, item_2 = create_list(:item, 2, merchant: merch)
     invoice = create(:invoice, merchant: merch)
     invoice_item = create(:invoice_item, item: item_1, quantity: 2, invoice: invoice)
+    transaction = create(:transaction, invoice: invoice)
 
     get "/api/v1/merchants/#{merch.id}/revenue"
 

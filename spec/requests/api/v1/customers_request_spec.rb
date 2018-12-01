@@ -54,8 +54,8 @@ describe 'Customer API' do
     customer = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(customer["created_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(customer["created_at"]).to_not eq(customer_2.created_at)
+    expect(customer['id']).to eq(customer_1.id)
+    expect(customer['id']).to_not eq(customer_2.id)
   end
 
   it 'finds a single customer by updated_at' do
@@ -67,8 +67,8 @@ describe 'Customer API' do
     customer = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(customer["updated_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(customer["updated_at"]).to_not eq(customer_2.updated_at)
+    expect(customer['id']).to eq(customer_1.id)
+    expect(customer['id']).to_not eq(customer_2.id)
   end
 
   it 'finds all customers by id' do
@@ -108,9 +108,9 @@ describe 'Customer API' do
     customers = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(customers[0]['attributes']["created_at"]).to eq(created)
-    expect(customers[1]['attributes']["created_at"]).to eq(created)
-    expect(customers[0]['attributes']["created_at"]).to_not eq(customer_3.created_at)
+    expect(customers[0]['attributes']['id']).to eq(customer_1.id)
+    expect(customers[1]['attributes']['id']).to eq(customer_2.id)
+    expect(customers).to_not include(customer_3.id)
   end
 
   it 'finds all customers by updated_at' do
@@ -123,9 +123,9 @@ describe 'Customer API' do
     customers = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(customers[0]['attributes']["updated_at"]).to eq(updated)
-    expect(customers[1]['attributes']["updated_at"]).to eq(updated)
-    expect(customers[0]['attributes']["updated_at"]).to_not eq(customer_3.updated_at)
+    expect(customers[0]['attributes']['id']).to eq(customer_1.id)
+    expect(customers[1]['attributes']['id']).to eq(customer_2.id)
+    expect(customers).to_not include(customer_3.id)
   end
 
   it 'finds a random customer' do

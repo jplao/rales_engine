@@ -21,115 +21,115 @@ describe 'Merchant API' do
   end
 
   it 'finds a single merchant by id' do
-    merch_1 = create(:merchant).id
-    merch_2 = create(:merchant)
+    merchant_1 = create(:merchant).id
+    merchant_2 = create(:merchant)
 
-    get "/api/v1/merchants/find?id=#{merch_1}"
+    get "/api/v1/merchants/find?id=#{merchant_1}"
 
     merchant = JSON.parse(response.body)['data']['attributes']
     expect(response).to be_successful
-    expect(merchant["id"]).to eq(merch_1)
-    expect(merchant["id"]).to_not eq(merch_2.id)
+    expect(merchant["id"]).to eq(merchant_1)
+    expect(merchant["id"]).to_not eq(merchant_2.id)
   end
 
   it 'finds a single merchant by name' do
     name = create(:merchant).name
-    merch_2 = create(:merchant)
+    merchant_2 = create(:merchant)
 
     get "/api/v1/merchants/find?name=#{name}"
 
     merchant = JSON.parse(response.body)['data']['attributes']
     expect(response).to be_successful
     expect(merchant["name"]).to eq(name)
-    expect(merchant["name"]).to_not eq(merch_2.name)
+    expect(merchant["name"]).to_not eq(merchant_2.name)
   end
 
   it 'finds a single merchant by created_at' do
-    merch_1 = create(:merchant, created_at: "2012-03-27T14:53:58.000Z")
-    merch_2 = create(:merchant)
+    merchant_1 = create(:merchant, created_at: "2012-03-27T14:53:58.000Z")
+    merchant_2 = create(:merchant)
 
-    get "/api/v1/merchants/find?created_at=#{merch_1.created_at}"
+    get "/api/v1/merchants/find?created_at=#{merchant_1.created_at}"
 
     merchant = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(merchant["created_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(merchant["created_at"]).to_not eq(merch_2.created_at)
+    expect(merchant['id']).to eq(merchant_1.id)
+    expect(merchant['id']).to_not eq(merchant_2.id)
   end
 
   it 'finds a single merchant by updated_at' do
-    merch_1 = create(:merchant, updated_at: "2012-03-27T14:53:58.000Z")
-    merch_2 = create(:merchant)
+    merchant_1 = create(:merchant, updated_at: "2012-03-27T14:53:58.000Z")
+    merchant_2 = create(:merchant)
 
-    get "/api/v1/merchants/find?updated_at=#{merch_1.updated_at}"
+    get "/api/v1/merchants/find?updated_at=#{merchant_1.updated_at}"
 
     merchant = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(merchant["updated_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(merchant["updated_at"]).to_not eq(merch_2.updated_at)
+    expect(merchant['id']).to eq(merchant_1.id)
+    expect(merchant['id']).to_not eq(merchant_2.id)
   end
 
   it 'finds all merchants by id' do
-    merch_1 = create(:merchant).id
-    merch_2 = create(:merchant)
+    merchant_1 = create(:merchant).id
+    merchant_2 = create(:merchant)
 
-    get "/api/v1/merchants/find?id=#{merch_1}"
+    get "/api/v1/merchants/find?id=#{merchant_1}"
 
     merchant = JSON.parse(response.body)['data']['attributes']
     expect(response).to be_successful
-    expect(merchant["id"]).to eq(merch_1)
-    expect(merchant["id"]).to_not eq(merch_2.id)
+    expect(merchant["id"]).to eq(merchant_1)
+    expect(merchant["id"]).to_not eq(merchant_2.id)
   end
 
   it 'finds all merchants by name' do
-    merch_name = 'A Merchant'
-    merch_1, merch_2 = create_list(:merchant, 2, name: merch_name)
-    merch_3 = create(:merchant)
+    merchant_name = 'A Merchant'
+    merchant_1, merchant_2 = create_list(:merchant, 2, name: merchant_name)
+    merchant_3 = create(:merchant)
 
-    get "/api/v1/merchants/find_all?name=#{merch_1.name}"
+    get "/api/v1/merchants/find_all?name=#{merchant_1.name}"
 
     merchants = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(merchants[0]['attributes']["name"]).to eq(merch_name)
-    expect(merchants[1]['attributes']["name"]).to eq(merch_name)
-    expect(merchants[0]['attributes']["name"]).to_not eq(merch_3.name)
+    expect(merchants[0]['attributes']["name"]).to eq(merchant_name)
+    expect(merchants[1]['attributes']["name"]).to eq(merchant_name)
+    expect(merchants[0]['attributes']["name"]).to_not eq(merchant_3.name)
   end
 
   it 'finds all merchants by created_at' do
     created = "2012-03-27T14:53:58.000Z"
-    merch_1, merch_2 = create_list(:merchant, 2, created_at: "2012-03-27T14:53:58.000Z")
-    merch_3 = create(:merchant)
+    merchant_1, merchant_2 = create_list(:merchant, 2, created_at: "2012-03-27T14:53:58.000Z")
+    merchant_3 = create(:merchant)
 
     get "/api/v1/merchants/find_all?created_at=#{created}"
 
     merchants = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(merchants[0]['attributes']["created_at"]).to eq(created)
-    expect(merchants[1]['attributes']["created_at"]).to eq(created)
-    expect(merchants[0]['attributes']["created_at"]).to_not eq(merch_3.created_at)
+    expect(merchants[0]['attributes']['id']).to eq(merchant_1.id)
+    expect(merchants[1]['attributes']['id']).to eq(merchant_2.id)
+    expect(merchants).to_not include(merchant_3.id)
   end
 
   it 'finds all merchants by updated_at' do
     updated = "2012-03-27T14:53:58.000Z"
-    merch_1, merch_2 = create_list(:merchant, 2, updated_at: "2012-03-27T14:53:58.000Z")
-    merch_3 = create(:merchant)
+    merchant_1, merchant_2 = create_list(:merchant, 2, updated_at: "2012-03-27T14:53:58.000Z")
+    merchant_3 = create(:merchant)
 
     get "/api/v1/merchants/find_all?updated_at=#{updated}"
 
     merchants = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(merchants[0]['attributes']["updated_at"]).to eq(updated)
-    expect(merchants[1]['attributes']["updated_at"]).to eq(updated)
-    expect(merchants[0]['attributes']["updated_at"]).to_not eq(merch_3.updated_at)
+    expect(merchants[0]['attributes']['id']).to eq(merchant_1.id)
+    expect(merchants[1]['attributes']['id']).to eq(merchant_2.id)
+    expect(merchants).to_not include(merchant_3.id)
   end
 
   it 'finds a random merchant' do
-    merch_1, merch_2, merch_3 = create_list(:merchant, 3)
-    array_of_merchants_ids = [merch_1.id, merch_2.id, merch_3.id]
+    merchant_1, merchant_2, merchant_3 = create_list(:merchant, 3)
+    array_of_merchants_ids = [merchant_1.id, merchant_2.id, merchant_3.id]
 
     get '/api/v1/merchants/random.json'
 

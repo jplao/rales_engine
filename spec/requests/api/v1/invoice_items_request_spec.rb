@@ -41,8 +41,8 @@ describe 'InvoiceItem API' do
     invoice_item = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(invoice_item["created_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(invoice_item["created_at"]).to_not eq(invoice_item_2.created_at)
+    expect(invoice_item["id"]).to eq(invoice_item_1.id)
+    expect(invoice_item["id"]).to_not eq(invoice_item_2.id)
   end
 
   it 'finds a single invoice_item by updated_at' do
@@ -54,8 +54,8 @@ describe 'InvoiceItem API' do
     invoice_item = JSON.parse(response.body)['data']['attributes']
 
     expect(response).to be_successful
-    expect(invoice_item["updated_at"]).to eq("2012-03-27T14:53:58.000Z")
-    expect(invoice_item["updated_at"]).to_not eq(invoice_item_2.updated_at)
+    expect(invoice_item["id"]).to eq(invoice_item_1.id)
+    expect(invoice_item["id"]).to_not eq(invoice_item_2.id)
   end
 
   it 'finds all invoice_items by id' do
@@ -80,9 +80,9 @@ describe 'InvoiceItem API' do
     invoice_items = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(invoice_items[0]['attributes']["created_at"]).to eq(created)
-    expect(invoice_items[1]['attributes']["created_at"]).to eq(created)
-    expect(invoice_items[0]['attributes']["created_at"]).to_not eq(invoice_item_3.created_at)
+    expect(invoice_items[0]['attributes']['id']).to eq(invoice_item_1.id)
+    expect(invoice_items[1]['attributes']['id']).to eq(invoice_item_2.id)
+    expect(invoice_items).to_not include(invoice_item_3.id)
   end
 
   it 'finds all invoice_items by updated_at' do
@@ -95,9 +95,9 @@ describe 'InvoiceItem API' do
     invoice_items = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-    expect(invoice_items[0]['attributes']["updated_at"]).to eq(updated)
-    expect(invoice_items[1]['attributes']["updated_at"]).to eq(updated)
-    expect(invoice_items[0]['attributes']["updated_at"]).to_not eq(invoice_item_3.updated_at)
+    expect(invoice_items[0]['attributes']['id']).to eq(invoice_item_1.id)
+    expect(invoice_items[1]['attributes']['id']).to eq(invoice_item_2.id)
+    expect(invoice_items).to_not include(invoice_item_3.id)
   end
 
   it 'finds a random invoice_item' do
