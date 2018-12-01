@@ -9,6 +9,7 @@ Rails.application.routes.draw do
         get '/most_revenue', to: 'revenue#index'
         get '/:id/revenue', to: 'revenue#show'
         get '/most_items', to: 'item#index'
+        get '/revenue', to: 'daterevenue#show'
       end
       resources :merchants, only: [:index, :show]
 
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
         get '/find_all', to: 'search#index'
         get '/random.json', to: 'search#show'
         get '/most_revenue', to: 'revenue#index'
+        get '/most_items', to: 'total#index'
       end
       resources :items, only: [:index, :show]
 
