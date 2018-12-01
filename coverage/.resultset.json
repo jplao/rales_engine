@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        99,
-        101,
+        102,
+        104,
         null,
         null
       ],
@@ -196,8 +196,8 @@
         1,
         1,
         1,
-        28,
-        29,
+        31,
+        32,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        75,
+        78,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        57,
-        59,
-        59,
+        60,
+        62,
+        62,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        153,
+        159,
         null,
         null
       ],
@@ -264,6 +264,9 @@
         1,
         null,
         1,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -1241,6 +1244,39 @@
         null,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/items_relationships_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/requests/api/v1/relationships/merchant_relationships_spec.rb": [
         1,
         null,
@@ -1456,6 +1492,8 @@
         1,
         null,
         1,
+        3,
+        1,
         2,
         1,
         null,
@@ -1598,6 +1636,8 @@
         null,
         null,
         1,
+        3,
+        1,
         2,
         1,
         null,
@@ -1671,6 +1711,6 @@
         null
       ]
     },
-    "timestamp": 1543686166
+    "timestamp": 1543687560
   }
 }
