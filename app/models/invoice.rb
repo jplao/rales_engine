@@ -6,7 +6,7 @@ class Invoice < ApplicationRecord
   has_many :transactions
 
   def self.best_day(item_id)
-    select('invoices.created_at, sum(invoice_item.quantity) as units_sold')
+    select('invoices.created_at, sum(invoice_items.quantity) as units_sold')
     .joins(:invoice_items)
     .group(:id)
     .order('units_sold desc')
