@@ -19,11 +19,38 @@ describe 'Merchant API' do
     get "/api/v1/merchants/most_revenue?quantity=2"
 
     merchants = JSON.parse(response.body)['data']
-    
+
     expect(response).to be_successful
     expect(merchants.count).to eq(2)
     expect(merchants[0]['attributes']['id']).to eq(merchant_3.id)
     expect(merchants[1]['attributes']['id']).to eq(merchant_2.id)
+  end
+
+  it 'sends a variable number of merchants that sold the most items' do
+    merchant_1, merchant_2, merchant_3 = create_list(:merchant, 3)
+    item_1 = create(:item, merchant: merchant_1)
+    item_2 = create(:item, merchant: merchant_2)
+    item_3 = create(:item, merchant: merchant_3)
+    item_4 = create(:item, merchant: merchant_1)
+    invoice_1 = create(:invoice, merchant: merchant_1)
+    invoice_2 = create(:invoice, merchant: merchant_2)
+    invoice_3 = create(:invoice, merchant: merchant_3)
+    ii_1 = create(:invoice_item, invoice: invoice_1, item: item_1, quantity: 1)
+    ii_2 = create(:invoice_item, invoice: invoice_2, item: item_2, quantity: 2)
+    ii_3 = create(:invoice_item, invoice: invoice_3, item: item_3, quantity: 3)
+    ii_4 = create(:invoice_item, invoice: invoice_1, item: item_4, quantity: 4)
+    transaction_1 = create(:transaction, invoice: invoice_1)
+    transaction_2 = create(:transaction, invoice: invoice_2)
+    transaction_3 = create(:transaction, invoice: invoice_3)
+
+    get "/api/v1/merchants/most_items?quantity=2"
+
+    merchants = JSON.parse(response.body)['data']
+
+    expect(response).to be_successful
+    expect(merchants.count).to eq(2)
+    expect(merchants[0]['attributes']['id']).to eq(merchant_1.id)
+    expect(merchants[1]['attributes']['id']).to eq(merchant_3.id)
   end
 
   it 'sends the total revenue for a queried date across all merchants' do
