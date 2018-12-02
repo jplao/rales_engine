@@ -5,13 +5,16 @@ describe 'Merchant API' do
     merch = create(:merchant)
     item_1, item_2 = create_list(:item, 2, merchant: merch)
     invoice = create(:invoice, merchant: merch)
-    invoice_item = create(:invoice_item, item: item_1, quantity: 2, invoice: invoice)
+    invoice_item = create(:invoice_item, item: item_1, quantity: 2, unit_price: 200, invoice: invoice)
     transaction = create(:transaction, invoice: invoice)
 
     get "/api/v1/merchants/#{merch.id}/revenue"
 
     revenue = JSON.parse(response.body)['data']
+
     expect(response).to be_successful
+  
+    expect(revenue['attributes']['revenue']).to eq(4.00)
   end
 
   it 'sends favorite customer specific to a merchant' do

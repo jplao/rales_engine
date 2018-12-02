@@ -197,7 +197,7 @@
         1,
         1,
         31,
-        32,
+        31,
         null,
         null
       ],
@@ -568,6 +568,9 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
         1,
         null,
         null,
@@ -1651,6 +1654,15 @@
         null,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/serializers/merchant_revenue_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants/fav_customer_controller.rb": [
         1,
         null,
@@ -1929,6 +1941,6 @@
         null
       ]
     },
-    "timestamp": 1543738848
+    "timestamp": 1543740476
   }
 }
