@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        111,
         113,
+        115,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        90,
+        92,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        64,
-        66,
-        66,
+        68,
+        70,
+        70,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        174,
+        180,
         null,
         null
       ],
@@ -408,7 +408,7 @@
         null,
         null,
         null,
-        0,
+        1,
         null,
         null,
         null
@@ -483,24 +483,39 @@
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
         null,
         1,
         null,
         1,
         null,
         1,
+        null,
+        1,
         1,
         1,
         1,
         1,
         null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -1532,7 +1547,7 @@
         null,
         null
       ],
-      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/items/revenue_controller.rb": [
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/items/total_controller.rb": [
         1,
         1,
         1,
@@ -1549,7 +1564,14 @@
         1,
         null,
         1,
-        24,
+        27,
+        null,
+        null
+      ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/items/revenue_controller.rb": [
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -1849,6 +1871,6 @@
         null
       ]
     },
-    "timestamp": 1543729760
+    "timestamp": 1543734774
   }
 }
