@@ -58,4 +58,28 @@ describe 'Merchant API' do
 
     expect(total_revenue['attributes']['total_revenue']).to eq('5.01')
   end
+
+  it 'sends the revenue for single merchant by a queried date' do
+    date = "2012-03-16"
+    merchant_1, merchant_2 = create_list(:merchant, 2)
+    item_1 = create(:item, merchant: merchant_1)
+    item_2 = create(:item, merchant: merchant_2)
+    invoice_1 = create(:invoice, merchant: merchant_1, created_at: date)
+    invoice_2 = create(:invoice, merchant: merchant_2, created_at: date)
+    invoice_3 = create(:invoice, merchant: merchant_1)
+    ii_1 = create(:invoice_item, invoice: invoice_1, item: item_1, unit_price: 101, quantity: 1)
+    ii_2 = create(:invoice_item, invoice: invoice_2, item: item_2, unit_price: 200, quantity: 2)
+    ii_3 = create(:invoice_item, invoice: invoice_3, item: item_1, unit_price: 300, quantity: 3)
+    transaction_1 = create(:transaction, invoice: invoice_1)
+    transaction_2 = create(:transaction, invoice: invoice_2)
+    transaction_3 = create(:transaction, invoice: invoice_3)
+
+    get "/api/v1/merchants/#{merchant_1.id}/revenue?date=#{date}"
+
+    total_revenue = JSON.parse(response.body)['data']
+  
+    expect(response).to be_successful
+
+    expect(total_revenue['attributes']['revenue']).to eq('1.01')
+  end
 end

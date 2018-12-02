@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        119,
-        121,
+        122,
+        124,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        100,
+        103,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        74,
         76,
-        76,
+        78,
+        78,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        190,
+        192,
         null,
         null
       ],
@@ -231,9 +231,9 @@
         1,
         1,
         1,
-        41,
-        41,
-        41,
+        44,
+        44,
+        44,
         null,
         null
       ],
@@ -562,6 +562,30 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
         1,
         null,
         null,
@@ -1605,6 +1629,14 @@
         null,
         1,
         null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/customers/favorite_merchant_controller.rb": [
@@ -1672,7 +1704,11 @@
         null,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -1681,7 +1717,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -1978,6 +2014,6 @@
         null
       ]
     },
-    "timestamp": 1543771975
+    "timestamp": 1543772780
   }
 }
