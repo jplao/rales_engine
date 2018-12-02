@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        113,
         115,
+        117,
         null,
         null
       ],
@@ -206,16 +206,16 @@
         1,
         1,
         1,
-        92,
+        94,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/items.rb": [
         1,
         1,
-        68,
-        70,
-        70,
+        72,
+        74,
+        74,
         1,
         null,
         null
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        180,
+        186,
         null,
         null
       ],
@@ -257,6 +257,7 @@
         1,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -375,7 +376,7 @@
         null,
         null,
         null,
-        0,
+        1,
         null,
         null
       ],
@@ -483,13 +484,15 @@
         null,
         1,
         1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
         null,
         null,
         1,
@@ -514,6 +517,16 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
         1,
         1,
         null,
@@ -1575,6 +1588,22 @@
         null,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/items/best_day_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/serializers/item_best_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants/revenue_controller.rb": [
         1,
         1,
@@ -1871,6 +1900,6 @@
         null
       ]
     },
-    "timestamp": 1543734774
+    "timestamp": 1543736980
   }
 }
