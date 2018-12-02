@@ -250,6 +250,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -1574,6 +1575,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        17,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/invoice_items/search_controller.rb": [
@@ -1674,6 +1679,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        21,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/items/search_controller.rb": [
@@ -1781,6 +1790,6 @@
         null
       ]
     },
-    "timestamp": 1543690650
+    "timestamp": 1543726645
   }
 }
