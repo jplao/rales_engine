@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-01T22:20:04-07:00">2018-12-01T22:20:04-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-01T22:49:20-07:00">2018-12-01T22:49:20-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.28%</span></span>
+    (<span class="covered_percent"><span class="green">99.4%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -31,10 +31,10 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>64</b> files in total.
-    <b>974</b> relevant lines. 
-    <span class="green"><b>967</b> lines covered</span> and
-    <span class="red"><b>7</b> lines missed </span>
+    <b>66</b> files in total.
+    <b>994</b> relevant lines. 
+    <span class="green"><b>988</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -108,6 +108,16 @@
         <td>13</td>
         <td>0</td>
         <td>1.5</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#b8c1313a7d16291b7a43eb2b83a246745170d83a" class="src_link" title="app/controllers/api/v1/items/revenue_controller.rb">app/controllers/api/v1/items/revenue_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -242,12 +252,12 @@
       
       <tr>
         <td class="strong"><a href="#0bba77913b262eb132a5cd6b0bcc14d92a9b1369" class="src_link" title="app/models/item.rb">app/models/item.rb</a></td>
-        <td class="red strong">75.0 %</td>
+        <td class="yellow strong">87.5 %</td>
         <td>22</td>
         <td>8</td>
-        <td>6</td>
-        <td>2</td>
-        <td>0.8</td>
+        <td>7</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -307,7 +317,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>5.6</td>
       </tr>
       
       <tr>
@@ -457,7 +467,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>55.5</td>
+        <td>56.5</td>
       </tr>
       
       <tr>
@@ -477,7 +487,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>18.4</td>
+        <td>18.8</td>
       </tr>
       
       <tr>
@@ -487,7 +497,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>31.2</td>
+        <td>33.2</td>
       </tr>
       
       <tr>
@@ -497,7 +507,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>56.7</td>
+        <td>58.7</td>
       </tr>
       
       <tr>
@@ -556,6 +566,16 @@
         <td>5</td>
         <td>3</td>
         <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#f6e3b14346ce7a009ea77ab63460213495cde3b3" class="src_link" title="spec/requests/api/v1/business_intelligence/item_business_intelligence_spec.rb">spec/requests/api/v1/business_intelligence/item_business_intelligence_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>24</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1464,6 +1484,55 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="b8c1313a7d16291b7a43eb2b83a246745170d83a">
+  <div class="header">
+    <h3>app/controllers/api/v1/items/revenue_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::Items::RevenueController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    render json: ItemSerializer.new(Item.most_revenue(params[:quantity]))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -2732,11 +2801,11 @@
         <div class="source_table" id="0bba77913b262eb132a5cd6b0bcc14d92a9b1369">
   <div class="header">
     <h3>app/models/item.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="yellow">87.5 %</span> covered</h4>
     <div>
       <b>8</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -2788,7 +2857,7 @@
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">    .joins(:invoice_items, invoice_items: :invoices)</code>
+          <code class="ruby">    .joins(:invoice_items, :invoices)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -2803,8 +2872,8 @@
           <code class="ruby">    .order(&#39;revenue desc&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">    .limit(quantity)</code>
         </li>
@@ -3379,8 +3448,8 @@
           <code class="ruby">  attribute :unit_price do |object|</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="6">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="6">
+          <span class="hits">24</span>
           
           <code class="ruby">    object.unit_price / 100.00</code>
         </li>
@@ -5158,14 +5227,14 @@
           <code class="ruby">  factory :customer do</code>
         </li>
       
-        <li class="covered" data-hits="109" data-linenumber="3">
-          <span class="hits">109</span>
+        <li class="covered" data-hits="111" data-linenumber="3">
+          <span class="hits">111</span>
           
           <code class="ruby">    sequence(:first_name) { |n| &quot;first#{n}&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="111" data-linenumber="4">
-          <span class="hits">111</span>
+        <li class="covered" data-hits="113" data-linenumber="4">
+          <span class="hits">113</span>
           
           <code class="ruby">    sequence(:last_name) { |n| &quot;last_name#{n}&quot; }</code>
         </li>
@@ -5292,8 +5361,8 @@
           <code class="ruby">    merchant</code>
         </li>
       
-        <li class="covered" data-hits="88" data-linenumber="5">
-          <span class="hits">88</span>
+        <li class="covered" data-hits="90" data-linenumber="5">
+          <span class="hits">90</span>
           
           <code class="ruby">    status { &quot;pending&quot; }</code>
         </li>
@@ -5341,20 +5410,20 @@
           <code class="ruby">  factory :item do</code>
         </li>
       
-        <li class="covered" data-hits="60" data-linenumber="3">
-          <span class="hits">60</span>
+        <li class="covered" data-hits="64" data-linenumber="3">
+          <span class="hits">64</span>
           
           <code class="ruby">    sequence(:name) { |n| &quot;NameOfItem#{n}&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="4">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="66" data-linenumber="4">
+          <span class="hits">66</span>
           
           <code class="ruby">    description { &quot;Description of each item.&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="5">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="66" data-linenumber="5">
+          <span class="hits">66</span>
           
           <code class="ruby">    unit_price {1}</code>
         </li>
@@ -5408,8 +5477,8 @@
           <code class="ruby">  factory :merchant do</code>
         </li>
       
-        <li class="covered" data-hits="168" data-linenumber="3">
-          <span class="hits">168</span>
+        <li class="covered" data-hits="174" data-linenumber="3">
+          <span class="hits">174</span>
           
           <code class="ruby">    sequence(:name) { |n| &quot;MerchantName#{n}&quot; }</code>
         </li>
@@ -5769,6 +5838,169 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="f6e3b14346ce7a009ea77ab63460213495cde3b3">
+  <div class="header">
+    <h3>spec/requests/api/v1/business_intelligence/item_business_intelligence_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &#39;Item API&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;sends a variable number of items that generate the most revenue&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    item_1, item_2, item_3 = create_list(:item, 3)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    item_4 = create(:item)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    invoice_1, invoice_2 = create_list(:invoice, 2)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    ii_1 = create(:invoice_item, invoice: invoice_1, item: item_1, quantity: 2, unit_price: 100)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    ii_2 = create(:invoice_item, invoice: invoice_1, item: item_2, quantity: 2, unit_price: 200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    ii_3 = create(:invoice_item, invoice: invoice_2, item: item_4, quantity: 1, unit_price: 300)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    ii_4 = create(:invoice_item, invoice: invoice_2, item: item_3, quantity: 1, unit_price: 100)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    get &quot;/api/v1/items/most_revenue?quantity=3&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    items = JSON.parse(response.body)[&#39;data&#39;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(response).to be_successful</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(items.count).to eq(3)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(items[0][&#39;attributes&#39;][&#39;id&#39;]).to eq(item_2.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(items[1][&#39;attributes&#39;][&#39;id&#39;]).to eq(item_4.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(items[2][&#39;attributes&#39;][&#39;id&#39;]).to eq(item_1.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
