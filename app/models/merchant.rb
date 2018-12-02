@@ -37,5 +37,4 @@ class Merchant < ApplicationRecord
     .where("invoices.customer_id = #{customer_id}")
     .limit(1)
   end
-
 end
