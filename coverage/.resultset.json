@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        107,
         109,
+        111,
         null,
         null
       ],
@@ -206,7 +206,7 @@
         1,
         1,
         1,
-        85,
+        88,
         null,
         null
       ],
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        166,
+        168,
         null,
         null
       ],
@@ -231,15 +231,16 @@
         1,
         1,
         1,
-        30,
-        30,
-        30,
+        35,
+        35,
+        35,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/config/routes.rb": [
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -325,7 +326,7 @@
         null,
         null,
         null,
-        0,
+        1,
         null,
         null,
         null
@@ -492,7 +493,25 @@
         null,
         1,
         1,
+        null,
+        null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -1509,6 +1528,20 @@
         1,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants/fav_customer_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/serializers/customer_serializer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/customers_controller.rb": [
         1,
         null,
@@ -1523,12 +1556,6 @@
         1,
         null,
         null,
-        null
-      ],
-      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/serializers/customer_serializer.rb": [
-        1,
-        1,
-        1,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/customers/search_controller.rb": [
@@ -1574,6 +1601,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        17,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/invoice_items/search_controller.rb": [
@@ -1674,6 +1705,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        21,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/items/search_controller.rb": [
@@ -1781,6 +1816,6 @@
         null
       ]
     },
-    "timestamp": 1543690650
+    "timestamp": 1543728004
   }
 }
