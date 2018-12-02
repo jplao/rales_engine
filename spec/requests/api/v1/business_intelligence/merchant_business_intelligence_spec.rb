@@ -5,7 +5,7 @@ describe 'Merchant API' do
     merch = create(:merchant)
     item_1, item_2 = create_list(:item, 2, merchant: merch)
     invoice = create(:invoice, merchant: merch)
-    invoice_item = create(:invoice_item, item: item_1, quantity: 2, unit_price: 200, invoice: invoice)
+    invoice_item = create(:invoice_item, item: item_1, quantity: 2, unit_price: 201, invoice: invoice)
     transaction = create(:transaction, invoice: invoice)
 
     get "/api/v1/merchants/#{merch.id}/revenue"
@@ -13,8 +13,8 @@ describe 'Merchant API' do
     revenue = JSON.parse(response.body)['data']
 
     expect(response).to be_successful
-  
-    expect(revenue['attributes']['revenue']).to eq(4.00)
+
+    expect(revenue['attributes']['revenue']).to eq("4.02")
   end
 
   it 'sends favorite customer specific to a merchant' do
@@ -35,4 +35,27 @@ describe 'Merchant API' do
     expect(customer['attributes']['id']).to_not eq(customer_1.id)
   end
 
+  it 'sends the total revenue for a queried date across all merchants' do
+    date = "2012-03-16"
+    merchant_1, merchant_2 = create_list(:merchant, 2)
+    item_1 = create(:item, merchant: merchant_1)
+    item_2 = create(:item, merchant: merchant_2)
+    invoice_1 = create(:invoice, merchant: merchant_1, created_at: date)
+    invoice_2 = create(:invoice, merchant: merchant_2, created_at: date)
+    invoice_3 = create(:invoice, merchant: merchant_1)
+    ii_1 = create(:invoice_item, invoice: invoice_1, item: item_1, unit_price: 101, quantity: 1)
+    ii_2 = create(:invoice_item, invoice: invoice_2, item: item_2, unit_price: 200, quantity: 2)
+    ii_3 = create(:invoice_item, invoice: invoice_3, item: item_1, unit_price: 300, quantity: 3)
+    transaction_1 = create(:transaction, invoice: invoice_1)
+    transaction_2 = create(:transaction, invoice: invoice_2)
+    transaction_3 = create(:transaction, invoice: invoice_3)
+
+    get "/api/v1/merchants/revenue?date=#{date}"
+
+    total_revenue = JSON.parse(response.body)['data']
+
+    expect(response).to be_successful
+
+    expect(total_revenue['attributes']['total_revenue']).to eq('5.01')
+  end
 end

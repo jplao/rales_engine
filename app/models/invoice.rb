@@ -14,4 +14,11 @@ class Invoice < ApplicationRecord
     .where("invoice_items.item_id = #{item_id}")
     .limit(1)
   end
+
+  def self.total_revenue_by_date(date)
+    select('sum(invoice_items.quantity * invoice_items.unit_price) as total_revenue')
+    .joins(:invoice_items, :transactions)
+    .where(transactions: {result:'success'})
+    .where(created_at: date)
+  end
 end
