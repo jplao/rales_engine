@@ -1,8 +1,19 @@
 namespace :import do
+
+  desc "Import all CSV files"
+  task all: :environment do
+    Rake::Task["import:merchants"].execute
+    Rake::Task["import:customers"].execute
+    Rake::Task["import:invoices"].execute
+    Rake::Task["import:items"].execute
+    Rake::Task["import:invoice_items"].execute
+    Rake::Task["import:transactions"].execute
+  end
+
   task merchants: :environment do
     counter = 0
     CSV.foreach('db/data/merchants.csv', headers: true, header_converters: :symbol) do |row|
-      merchant = Merchant.create(row_to_hash)
+      merchant = Merchant.create(row.to_hash)
       counter += 1 if merchant.persisted?
     end
 
@@ -11,8 +22,8 @@ namespace :import do
 
   task items: :environment do
     counter = 0
-    CSV.foreach('db/data/itemss.csv', headers: true, header_converters: :symbol) do |row|
-      item = Item.create(row_to_hash)
+    CSV.foreach('db/data/items.csv', headers: true, header_converters: :symbol) do |row|
+      item = Item.create(row.to_hash)
       counter += 1 if item.persisted?
     end
 
@@ -22,7 +33,7 @@ namespace :import do
   task customers: :environment do
     counter = 0
     CSV.foreach('db/data/customers.csv', headers: true, header_converters: :symbol) do |row|
-      customer = Customer.create(row_to_hash)
+      customer = Customer.create(row.to_hash)
       counter += 1 if customer.persisted?
     end
 
@@ -32,7 +43,7 @@ namespace :import do
   task invoices: :environment do
     counter = 0
     CSV.foreach('db/data/invoices.csv', headers: true, header_converters: :symbol) do |row|
-      invoice = Invoice.create(row_to_hash)
+      invoice = Invoice.create(row.to_hash)
       counter += 1 if invoice.persisted?
     end
 
@@ -42,7 +53,7 @@ namespace :import do
   task invoice_items: :environment do
     counter = 0
     CSV.foreach('db/data/invoice_items.csv', headers: true, header_converters: :symbol) do |row|
-      invoice_item = InvoiceItem.create(row_to_hash)
+      invoice_item = InvoiceItem.create(row.to_hash)
       counter += 1 if invoice_item.persisted?
     end
 
@@ -52,7 +63,7 @@ namespace :import do
   task transactions: :environment do
     counter = 0
     CSV.foreach('db/data/transactions.csv', headers: true, header_converters: :symbol) do |row|
-      transaction = Transaction.create(row_to_hash)
+      transaction = Transaction.create(row.to_hash)
       counter += 1 if transaction.persisted?
     end
 
