@@ -356,6 +356,9 @@
         null,
         1,
         1,
+        2,
+        2,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/models/invoice_item.rb": [
@@ -364,13 +367,62 @@
         1,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/models/invoice_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/models/invoice.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/models/item_spec.rb": [
         1,
         null,
         1,
         1,
         2,
-        null,
+        2,
+        2,
         null,
         null
       ],
@@ -456,6 +508,8 @@
         null,
         1,
         1,
+        2,
+        null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/models/transaction.rb": [
@@ -1686,40 +1740,6 @@
         null,
         null
       ],
-      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/models/invoice.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/customers/favorite_merchant_controller.rb": [
         1,
         1,
@@ -2109,6 +2129,6 @@
         null
       ]
     },
-    "timestamp": 1543783280
+    "timestamp": 1543848227
   }
 }
