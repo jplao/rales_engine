@@ -7,7 +7,7 @@ class Api::V1::Merchants::RevenueController < ApplicationController
     if params[:date]
       render json: MerchantRevenueSerializer.new(Invoice.merchant_revenue_by_date(params[:date], params[:id])[0])
     else
-      render json: MerchantRevenueSerializer.new(Merchant.revenue(params[:id]).first)
+      render json: MerchantRevenueSerializer.new(Merchant.revenue(params[:id]))
     end
   end
 end

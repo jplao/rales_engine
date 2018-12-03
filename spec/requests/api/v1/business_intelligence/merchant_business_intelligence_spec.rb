@@ -19,7 +19,6 @@ describe 'Merchant API' do
     get "/api/v1/merchants/most_revenue?quantity=2"
 
     merchants = JSON.parse(response.body)['data']
-
     expect(response).to be_successful
     expect(merchants.count).to eq(2)
     expect(merchants[0]['attributes']['id']).to eq(merchant_3.id)
@@ -134,4 +133,24 @@ describe 'Merchant API' do
     expect(customer['attributes']['id']).to eq(customer_2.id)
     expect(customer['attributes']['id']).to_not eq(customer_1.id)
   end
+
+  it 'sends customer with pending invoices specific to a merchant' do
+    merchant_1, merchant_2 = create_list(:merchant, 2)
+    customer_1, customer_2 = create_list(:customer, 2)
+    invoice_1 = create(:invoice, merchant: merchant_1, customer: customer_2)
+    transaction_1 = create(:transaction, invoice: invoice_1, result: 'failed')
+    transaction_2 = create(:transaction, invoice: invoice_1)
+    invoice_2 = create(:invoice, merchant: merchant_1, customer: customer_1)
+    invoice_3 = create(:invoice, merchant: merchant_2, customer: customer_2)
+    transaction_3 = create(:transaction, invoice: invoice_2, result: 'failed')
+    transaction_4 = create(:transaction, invoice: invoice_3, result: 'failed')
+
+    get "/api/v1/merchants/#{merchant_1.id}/customers_with_pending_invoices"
+
+    customer = JSON.parse(response.body)['data']
+
+    expect(response).to be_successful
+    expect(customer[0]['attributes']['id']).to eq(customer_2.id)
+  end
+
 end

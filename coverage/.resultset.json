@@ -186,8 +186,8 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/customers.rb": [
         1,
         1,
-        128,
         130,
+        132,
         null,
         null
       ],
@@ -206,7 +206,7 @@
         1,
         1,
         1,
-        109,
+        112,
         null,
         null
       ],
@@ -223,7 +223,7 @@
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/spec/factories/merchants.rb": [
         1,
         1,
-        198,
+        200,
         null,
         null
       ],
@@ -231,15 +231,16 @@
         1,
         1,
         1,
-        50,
-        50,
-        50,
+        54,
+        54,
+        51,
         null,
         null
       ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/config/routes.rb": [
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -328,7 +329,15 @@
         null,
         null,
         null,
+        null,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -414,6 +423,7 @@
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -549,7 +559,6 @@
         1,
         null,
         1,
-        null,
         1,
         1,
         1,
@@ -663,6 +672,26 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -1808,6 +1837,14 @@
         1,
         null
       ],
+      "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/merchants/pending_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jenniferlao/turing/mod3/projects/rales_engine/app/controllers/api/v1/customers_controller.rb": [
         1,
         null,
@@ -2072,6 +2109,6 @@
         null
       ]
     },
-    "timestamp": 1543774582
+    "timestamp": 1543783280
   }
 }

@@ -13,6 +13,7 @@ class Invoice < ApplicationRecord
     .order(created_at: :desc)
     .where("invoice_items.item_id = #{item_id}")
     .limit(1)
+    .first
   end
 
   def self.total_revenue_by_date(date)

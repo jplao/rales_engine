@@ -17,6 +17,7 @@ class Merchant < ApplicationRecord
     .where(transactions: {result: 'success'})
     .group(:id)
     .where(id: id)
+    .first
   end
 
   def self.most_items(quantity)
